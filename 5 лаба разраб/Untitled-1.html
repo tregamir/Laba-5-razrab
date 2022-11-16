@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta type ="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+
+	<script>
+		
+		function functionConstr(OBJ,n_param1,n_param2,param1,param2) {
+			return{
+				[n_param1]: 1,
+				[n_param2]: param2
+			};
+			
+
+		}
+		var buttons = new Array (1200);
+		var i = 0;
+		var a = true;
+		while(a){
+			var OBJ = prompt("название объекта");
+			if (OBJ == "stop"){
+				a = false;
+				break;
+			}
+			var n_param1 = prompt("название первого параметра");
+			var param1 = prompt("значение первого параметра");
+			var n_param2 = prompt("название второго параметра");
+			var param2 = prompt("значение второго параметра");
+			
+			buttons[i] = new functionConstr(OBJ,n_param1,n_param2,param1,param2);
+			console.log(buttons[i]);
+			i++;
+		}
+
+	</script>
+
+</body>
+</html>
